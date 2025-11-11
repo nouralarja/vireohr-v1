@@ -21,16 +21,13 @@ load_dotenv()
 app = FastAPI()
 api_router = FastAPI()
 
-# CORS middleware - Updated for custom domain
+# CORS middleware - Production-ready with env-based origins
+cors_origins_str = os.getenv("CORS_ORIGINS", "https://vireohr.app,http://localhost:3000")
+cors_origins = [origin.strip() for origin in cors_origins_str.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://gostacoffee.com",  # Custom domain
-        "https://www.gostacoffee.com",  # WWW version
-        "https://stafftracker-12.emergent.host",  # Original deployment URL
-        "http://localhost:3000",  # Local development
-        "*"  # Allow all for development
-    ],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
