@@ -80,7 +80,7 @@ class ComprehensiveBackendTester:
         # Test root endpoint (should work without auth)
         try:
             response = self.session.get(f"{BASE_URL}/")
-            if response.status_code == 200 and "Gosta API" in response.json().get("message", ""):
+            if response.status_code == 200 and "VireoHR API" in response.json().get("message", ""):
                 self.log_test("AUTH", "Root API Endpoint", True)
             else:
                 self.log_test("AUTH", "Root API Endpoint", False, f"Status: {response.status_code}", "critical")
