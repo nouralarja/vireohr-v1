@@ -16,7 +16,7 @@ print("="*60)
 
 # Try to get the user
 try:
-    user = auth.get_user_by_email('geotest@gosta.com')
+    user = auth.get_user_by_email('geotest@vireohr.com')
     print(f"\n✅ User found: {user.uid}")
     
     # Update the password
@@ -30,7 +30,7 @@ try:
     # Update Firestore
     user_data = {
         'uid': user.uid,
-        'email': 'geotest@gosta.com',
+        'email': 'geotest@vireohr.com',
         'name': 'Geofence Test',
         'role': 'EMPLOYEE',
         'salary': 50,
@@ -44,14 +44,14 @@ except auth.UserNotFoundError:
     print("\n⚠️  User not found, creating new user...")
     
     # Delete any existing Firestore user with this email
-    users_ref = db.collection('users').where('email', '==', 'geotest@gosta.com').stream()
+    users_ref = db.collection('users').where('email', '==', 'geotest@vireohr.com').stream()
     for u in users_ref:
         db.collection('users').document(u.id).delete()
         print(f"🗑️  Deleted orphaned Firestore user: {u.id}")
     
     # Create new user
     user = auth.create_user(
-        email='geotest@gosta.com',
+        email='geotest@vireohr.com',
         password='test123456',
         display_name='Geofence Test',
         email_verified=True
@@ -61,7 +61,7 @@ except auth.UserNotFoundError:
     # Create Firestore user
     user_data = {
         'uid': user.uid,
-        'email': 'geotest@gosta.com',
+        'email': 'geotest@vireohr.com',
         'name': 'Geofence Test',
         'role': 'EMPLOYEE',
         'salary': 50,
@@ -78,7 +78,7 @@ except Exception as e:
 print("\n" + "="*60)
 print("✅ USER READY!")
 print("="*60)
-print(f"\n📧 Email: geotest@gosta.com")
+print(f"\n📧 Email: geotest@vireohr.com")
 print(f"🔑 Password: test123456")
 print(f"👤 UID: {user.uid}")
 print(f"✅ Email Verified: True")

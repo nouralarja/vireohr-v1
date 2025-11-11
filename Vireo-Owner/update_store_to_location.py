@@ -97,7 +97,7 @@ print(f"📍 {store_data.get('name')}: {store_data.get('lat', 0):.6f}, {store_da
     print("NOW TEST GEOFENCING:")
     print("="*60)
     print("\n1️⃣  Stay at your current location")
-    print("2️⃣  Open app → Sign in: geotest@gosta.com / test123456")
+    print("2️⃣  Open app → Sign in: geotest@vireohr.com / test123456")
     print("3️⃣  Go to Clock tab")
     print("4️⃣  Allow location permissions when prompted")
     print("5️⃣  Tap 'Clock In'")

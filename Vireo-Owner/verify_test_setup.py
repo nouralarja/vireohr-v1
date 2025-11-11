@@ -28,8 +28,8 @@ if stores:
 
 # Check test user
 try:
-    user = auth.get_user_by_email('geotest@gosta.com')
-    print(f"\n👤 Test User: geotest@gosta.com")
+    user = auth.get_user_by_email('geotest@vireohr.com')
+    print(f"\n👤 Test User: geotest@vireohr.com")
     print(f"   UID: {user.uid}")
     
     # Check if shift exists for today
@@ -81,7 +81,7 @@ print("\n" + "="*60)
 print("✅ TEST ENVIRONMENT READY!")
 print("="*60)
 print("\n📱 Test with:")
-print("   Email: geotest@gosta.com")
+print("   Email: geotest@vireohr.com")
 print("   Password: test123456")
 print("   Location: 32.07685088999999, 36.10207365999999")
 print("\n🚀 Ready to test geofencing and late penalties!")

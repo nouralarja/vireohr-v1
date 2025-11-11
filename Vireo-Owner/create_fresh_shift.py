@@ -14,7 +14,7 @@ except ValueError:
 db = firestore.client()
 
 # Get test user and store
-user = auth.get_user_by_email('geotest@gosta.com')
+user = auth.get_user_by_email('geotest@vireohr.com')
 stores = list(db.collection('stores').limit(1).stream())
 store = stores[0]
 store_data = store.to_dict()
@@ -54,7 +54,7 @@ db.collection('shifts').document(shift_id).set(shift)
 print("\n" + "="*60)
 print("✅ FRESH SHIFT CREATED!")
 print("="*60)
-print(f"\n👤 Employee: geotest@gosta.com")
+print(f"\n👤 Employee: geotest@vireohr.com")
 print(f"🏪 Store: {store_data.get('name')}")
 print(f"📍 Location: {store_data.get('lat')}, {store_data.get('lng')}")
 print(f"\n⏰ Shift Details:")

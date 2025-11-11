@@ -62,7 +62,7 @@ def update_store_location():
     
     print("\n📱 TEST INSTRUCTIONS:")
     print("\n1. Stay at your current location")
-    print("2. Login as: geotest@gosta.com / vireohr123")
+    print("2. Login as: geotest@vireohr.com / vireohr123")
     print("3. Go to Clock tab")
     print("4. Tap 'Clock In'")
     print("5. Grant location permission")

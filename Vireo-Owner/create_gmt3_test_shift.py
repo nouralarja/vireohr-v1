@@ -26,7 +26,7 @@ now = datetime.now(APP_TIMEZONE)
 print(f"\n🕐 Current Time (GMT+03:00): {now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
 
 # Get test user and store
-user = auth.get_user_by_email('geotest@gosta.com')
+user = auth.get_user_by_email('geotest@vireohr.com')
 stores = list(db.collection('stores').limit(1).stream())
 store = stores[0]
 store_data = store.to_dict()
@@ -64,7 +64,7 @@ db.collection('shifts').document(shift_id).set(shift)
 print("\n" + "="*60)
 print("✅ TEST SHIFT CREATED (GMT+03:00)")
 print("="*60)
-print(f"\n👤 Employee: geotest@gosta.com / test123456")
+print(f"\n👤 Employee: geotest@vireohr.com / test123456")
 print(f"🏪 Store: {store_data.get('name')}")
 print(f"📍 Location: {store_data.get('lat')}, {store_data.get('lng')}")
 print(f"\n⏰ Shift Details:")

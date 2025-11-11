@@ -43,22 +43,22 @@ print(f"🔒 Geofence Radius: 10 meters")
 
 # Get/create test employee
 try:
-    user = auth.get_user_by_email('geotest@gosta.com')
+    user = auth.get_user_by_email('geotest@vireohr.com')
     uid = user.uid
-    print(f"\n✅ Using test employee: geotest@gosta.com")
+    print(f"\n✅ Using test employee: geotest@vireohr.com")
 except:
     user = auth.create_user(
-        email='geotest@gosta.com',
+        email='geotest@vireohr.com',
         password='test123456',
         display_name='Geofence Test'
     )
     uid = user.uid
-    print(f"\n✅ Created test employee: geotest@gosta.com")
+    print(f"\n✅ Created test employee: geotest@vireohr.com")
 
 # Create/update user in Firestore
 user_data = {
     'uid': uid,
-    'email': 'geotest@gosta.com',
+    'email': 'geotest@vireohr.com',
     'name': 'Geofence Test',
     'role': 'EMPLOYEE',
     'salary': 50,
@@ -118,7 +118,7 @@ print("\n" + "="*60)
 print("✅ TEST ENVIRONMENT READY!")
 print("="*60)
 
-print(f"\n📧 Test Account: geotest@gosta.com / test123456")
+print(f"\n📧 Test Account: geotest@vireohr.com / test123456")
 print(f"📍 Your Coordinates: {YOUR_LAT:.6f}, {YOUR_LNG:.6f}")
 print(f"🏪 Store: {store_data.get('name')} (at your location)")
 print(f"🔒 Geofence: 10m radius")
@@ -149,7 +149,7 @@ print("="*60)
 
 print("\n1️⃣  TEST GEOFENCING AT YOUR LOCATION:")
 print("   - Open app")
-print("   - Sign in: geotest@gosta.com / test123456")
+print("   - Sign in: geotest@vireohr.com / test123456")
 print("   - Go to Clock tab")
 print("   - Allow location permissions")
 print("   - ✅ Should show your shift")

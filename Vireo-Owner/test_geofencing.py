@@ -18,13 +18,13 @@ print("="*60)
 
 # Get or create test employee for geofencing
 try:
-    user = auth.get_user_by_email('geotest@gosta.com')
+    user = auth.get_user_by_email('geotest@vireohr.com')
     uid = user.uid
     print(f"✅ Using existing test employee: {uid}")
 except:
     try:
         user = auth.create_user(
-            email='geotest@gosta.com',
+            email='geotest@vireohr.com',
             password='test123456',
             display_name='Geofence Test'
         )
@@ -37,7 +37,7 @@ except:
 # Create/update user in Firestore
 user_data = {
     'uid': uid,
-    'email': 'geotest@gosta.com',
+    'email': 'geotest@vireohr.com',
     'name': 'Geofence Test',
     'role': 'EMPLOYEE',
     'salary': 50,
@@ -88,7 +88,7 @@ if stores:
     print("="*60)
     print("✅ GEOFENCING TEST READY!")
     print("="*60)
-    print(f"\n📧 Test Account: geotest@gosta.com / test123456")
+    print(f"\n📧 Test Account: geotest@vireohr.com / test123456")
     print(f"👤 Employee ID: {uid}")
     print(f"\n🏪 Store: {store_data.get('name')}")
     print(f"📍 Store Location: {store_data.get('lat', 0):.6f}, {store_data.get('lng', 0):.6f}")
@@ -106,7 +106,7 @@ if stores:
     print("   (This will prompt for your GPS coordinates)")
     
     print("\n2️⃣  TEST INSIDE GEOFENCE (Should Work):")
-    print("   - Sign in as geotest@gosta.com")
+    print("   - Sign in as geotest@vireohr.com")
     print("   - Go to Clock tab")
     print("   - Make sure location permissions are enabled")
     print("   - Tap 'Clock In'")
