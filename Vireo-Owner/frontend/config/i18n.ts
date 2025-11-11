@@ -8,7 +8,7 @@ import { I18nManager, Platform } from 'react-native';
 import en from '../locales/en.json';
 import ar from '../locales/ar.json';
 
-const LANGUAGE_STORAGE_KEY = '@gosta_language';
+const LANGUAGE_STORAGE_KEY = '@vireohr_language';
 
 // Language resources
 const resources = {
