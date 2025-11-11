@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-COMPREHENSIVE DEPLOYMENT READINESS TEST - GOSTA BACKEND
+COMPREHENSIVE DEPLOYMENT READINESS TEST - VIREOHR BACKEND
 Tests all critical features for production deployment
 """
 
@@ -67,7 +67,7 @@ class ComprehensiveBackendTester:
 
     def run_comprehensive_tests(self):
         """Run all critical deployment readiness tests"""
-        print("🚀 GOSTA BACKEND - COMPREHENSIVE DEPLOYMENT READINESS TEST")
+        print("🚀 VIREOHR BACKEND - COMPREHENSIVE DEPLOYMENT READINESS TEST")
         print("=" * 70)
         print(f"Testing API: {BASE_URL}")
         print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
