@@ -69,7 +69,7 @@ def get_current_time():
 # Pydantic models
 class UserCreate(BaseModel):
     email: str
-    password: str = "gosta123"  # Default password if not provided
+    password: str = "vireohr123"  # Default password if not provided
     name: str
     role: str
     assignedStoreId: Optional[str] = None
