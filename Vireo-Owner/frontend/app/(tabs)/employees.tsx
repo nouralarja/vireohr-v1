@@ -227,7 +227,7 @@ export default function Employees() {
         }
       }
 
-      Alert.alert('Success', 'Employee created successfully!\n\nDefault password: gosta123\n\nThe employee should change this on first login.');
+      Alert.alert('Success', 'Employee created successfully!\n\nDefault password: vireohr123\n\nThe employee should change this on first login.');
       setAddModalVisible(false);
       // Reset form
       setNewEmployeeName('');
