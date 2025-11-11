@@ -2108,8 +2108,15 @@ async def get_overtime_toggle(date: str, token: dict = Depends(verify_token)):
 # ==================== SUPER-ADMIN ROUTES ====================
 
 @api_router.get("/admin/tenants")
-async def list_all_tenants(user: dict = Depends(require_role(['superadmin']))):
-    """List all tenants - Super Admin only"""
+async def list_all_tenants(
+    request: Request,
+    user: dict = Depends(require_role(['superadmin']))
+):
+    """List all tenants with pagination - Super Admin only"""
+    # Get pagination params from query string
+    skip = int(request.query_params.get("skip", 0))
+    limit = int(request.query_params.get("limit", 50))
+    
     tenants = list(firebase_db.collection('tenants').stream())
     
     tenant_list = []
@@ -2128,7 +2135,17 @@ async def list_all_tenants(user: dict = Depends(require_role(['superadmin']))):
     # Sort by creation date descending
     tenant_list.sort(key=lambda x: x.get('createdAt', ''), reverse=True)
     
-    return tenant_list
+    # Apply pagination
+    total = len(tenant_list)
+    paginated_list = tenant_list[skip:skip + limit]
+    
+    return {
+        'tenants': paginated_list,
+        'total': total,
+        'skip': skip,
+        'limit': limit,
+        'hasMore': skip + limit < total
+    }
 
 
 @api_router.post("/admin/tenants/{tenant_id}/suspend")
