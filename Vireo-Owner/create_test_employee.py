@@ -115,7 +115,7 @@ if stores:
     print("\n" + "="*60)
     print("TEST ACCOUNT CREATED SUCCESSFULLY!")
     print("="*60)
-    print(f"Email: testemployee@gosta.com")
+    print(f"Email: testemployee@vireohr.com")
     print(f"Password: test123456")
     print(f"UID: {uid}")
     print(f"Role: EMPLOYEE")
