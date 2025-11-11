@@ -1,0 +1,90 @@
+{
+  "common": {
+    "hello": "Hello",
+    "welcome": "Welcome",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "name": "Name",
+    "role": "Role",
+    "selectRole": "Select Role"
+  },
+  "roles": {
+    "OWNER": "Owner",
+    "CO": "CO",
+    "MANAGER": "Manager",
+    "SHIFT_SUPERVISOR": "Shift Supervisor",
+    "EMPLOYEE": "Employee"
+  },
+  "navigation": {
+    "home": "Home",
+    "schedule": "My Store Schedule",
+    "attendance": "Attendance",
+    "ingredients": "Ingredients",
+    "stores": "Stores",
+    "reports": "Reports"
+  },
+  "clock": {
+    "clockIn": "Clock In",
+    "clockOut": "Clock Out",
+    "currentlyWorking": "Currently Working",
+    "notScheduled": "You are not scheduled for today",
+    "tooEarly": "Too early to clock in. You can clock in 10 minutes before your shift.",
+    "mustCount": "You must complete final count before clocking out."
+  },
+  "ingredient": {
+    "firstCount": "First Count",
+    "finalCount": "Final Count",
+    "addIngredient": "Add Ingredient",
+    "boxes": "Boxes",
+    "units": "Units",
+    "lowStock": "Low Stock"
+  },
+  "stores": {
+    "addStore": "Add Store",
+    "maxReached": "Maximum 50 stores reached",
+    "storeName": "Store Name",
+    "address": "Address",
+    "phone": "Phone"
+  },
+  "leave": {
+    "requestLeave": "Request Leave",
+    "pendingRequests": "Pending Requests",
+    "approve": "Approve",
+    "deny": "Deny",
+    "reason": "Reason",
+    "date": "Date"
+  },
+  "employees": {
+    "employees": "Employees",
+    "assignToStore": "Assign to Store",
+    "selectStore": "Select Store",
+    "saveAssignment": "Save Assignment"
+  },
+  "schedule": {
+    "createSchedule": "Create Schedule",
+    "mySchedule": "My Schedule",
+    "weekView": "Week View"
+  },
+  "settings": {
+    "enable2FA": "Enable 2FA",
+    "scanQRCode": "Scan QR Code",
+    "enter6DigitCode": "Enter 6-digit code",
+    "disable2FA": "Disable 2FA",
+    "settings": "Settings"
+  }
+}

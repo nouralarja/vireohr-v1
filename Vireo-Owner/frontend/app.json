@@ -1,0 +1,96 @@
+{
+  "expo": {
+    "name": "VireoHR",
+    "slug": "vireohr-employee-management",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "vireohr",
+    "userInterfaceStyle": "automatic",
+    "notification": {
+      "icon": "./assets/images/notification-icon.png",
+      "color": "#0D4633",
+      "androidMode": "default"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vireohr.employee",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "VireoHR needs your location to verify you are at the store before clocking in/out.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "VireoHR needs your location to verify you are at the store before clocking in/out.",
+        "NSUserNotificationsUsageDescription": "VireoHR sends shift reminders and leave request notifications."
+      },
+      "associatedDomains": ["applinks:gostacoffee.com", "applinks:www.gostacoffee.com"]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0D4633"
+      },
+      "package": "com.vireohr.employee",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS"
+      ],
+      "useNextNotificationsApi": true,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "gostacoffee.com",
+              "pathPrefix": "/app"
+            },
+            {
+              "scheme": "https",
+              "host": "www.gostacoffee.com",
+              "pathPrefix": "/app"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0D4633"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Gosta to save CSV files to your device.",
+          "savePhotosPermission": "Allow Gosta to save CSV files to Downloads folder.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-localization",
+      "expo-font",
+      "expo-secure-store",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "ON_ERROR_RECOVERY"
+    }
+  }
+}

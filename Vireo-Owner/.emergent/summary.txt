@@ -1,0 +1,59 @@
+<analysis>
+The previous AI engineer successfully stabilized and enhanced the Gosta mobile app, starting by fixing critical Firebase authentication persistence and resolving an ngrok tunnel connectivity issue that prevented the app from loading. Following this, core features were refined, including backend timezone configuration (GMT+03:00) and frontend tab visibility for specific roles (managers' schedule, supervisors' ingredients). A key part of the work involved debugging and correcting the logic for supervisor ingredient management and implementing a time-based restriction for the Final Count.
+
+A significant code quality initiative was undertaken, addressing duplicate logic, dead code, and needless indirection across the codebase, resulting in five focused refactoring PRs that streamlined date handling and removed unused components. Most recently, the focus shifted to frontend architecture improvements: implementing a shared  with a 30-second TTL to optimize data fetching across multiple screens and developing a standardized  error-handling hook. These recent changes necessitated fixing a 403 authentication error in the  and a logic error in , with current work addressing console errors from unrefactored screens.
+</analysis>
+
+<product_requirements>
+The Gosta mobile app is an employee analysis system for up to 100 employees across 50 stores, built with Expo SDK 54, React Native, and TypeScript. It features a pure white, deep teal, and champagne gold brand palette with an RTL-first bilingual interface (AR/EN). Authentication uses Firebase Email/Password, with 2FA pending. Role-based permissions (Owner, CO, Manager, Supervisor, Employee, Accountant) govern access to features like store management (CRUD, geolocation), time-gated clock IN/OUT with geofencing, and manager schedule creation (multi-employee, time pickers, self-selection, multi-store shifts). Employees view their schedules, and ingredient management involves first, add, and final counts (supporting KILO type with decimals). CSV exports for hours and ingredients (Arabic encoding) are required. Performance targets include a cold start under 2 seconds and Firebase offline persistence.
+
+Implemented features include full bilingual support, geofencing (10m radius), multi-employee shift assignment, native time pickers, enhanced Currently Working display (by store, with supervisor badge), custom domain configuration, ingredient flow enforcement, leave timing enforcement, employee earnings calculation and display (Today/Month, JD currency), auto clock-out, late/no-show penalties, a dedicated Payroll tab, and refined CO permissions. The timezone is GMT+03:00.
+</product_requirements>
+
+<key_technical_concepts>
+- **Tech Stack:** Expo SDK 54, React Native (0.81.5), TypeScript, FastAPI, MongoDB, Firebase (Auth, Firestore).
+- **Concepts:** Role-Based Access Control, Geofencing (Haversine), ,  (RTL-first), ,  for Firebase persistence,  for timezone handling, ,  for offline support.
+</key_technical_concepts>
+
+<code_architecture>
+The application is a monorepo with  (FastAPI/MongoDB) and  (Expo/React Native) directories.
+
+
+-   ****: FastAPI backend. Role-based middleware, geofencing (Haversine), shift conflict detection. Recently updated to include ingredient flow, leave timing, Currently Working endpoint, earnings, auto clock-out, penalties, payroll, supervisor info. Critical changes include timezone configuration using  (GMT+03:00) and replacing  with a timezone-aware helper, and removal of  and unused MongoDB connection code.
+-   ****: Tab navigation root layout. Modified for i18n and role-based tab visibility. Key changes include making Create Schedule visible for managers and Ingredients dynamically visible for active supervisors. Updated to consume  and integrates .
+-   ****: Clock in/out screen. Restricts Currently Working visibility, uses geofencing. Updated to use  endpoint. Refactored to use  and  hook, fixing an earlier logic error in .
+-   ****: Home screen. Displays Today and This Month earnings, warnings, and penalties.
+-   ****: Ingredient management. Updated with flow indicator banner. Logic fixed to correctly check  for supervisors and  is now dynamically hidden until 30 minutes before shift end. Consumes .
+-   ****: Leave request. Displays active shift blocking messages. Updated to consume  and uses .
+-   ****: Schedule view. Refactored to use the new  hook for data fetching.
+-   ****: Firebase config. Updated to use  with  for proper auth persistence.
+-   ****: Environment variables.  fixed to  to resolve ngrok tunnel issues.
+-   ****: Firebase Auth context. Handles user authentication state changes.
+-   ** (NEW)**: Provides shared state for attendance and shifts with a 30-second TTL and caching to . Fetching is conditional on user authentication and online status.
+-   ** (NEW)**: A new hook for standardized API error handling, including ,  notifications, and development console logging.
+-   ** (NEW)**: Utility file created to centralize date formatting ().
+-   ** (NEW)**: Small component to visually indicate offline status.
+</code_architecture>
+
+<pending_tasks>
+- **2FA Implementation:** Firebase TOTP integration, QR code generation, and 6-digit code verification.
+- **UI Polish:** Live badge for Currently Working.
+- **Standardized Error Handling Rollout:** Replace raw  in , , ,  with  hook.
+- **Error Boundary:** Add one top-level ErrorBoundary in .
+- **Offline-First Safety Net (remaining):** Implement NetInfo in AttendanceContext for offline/online re-fetch logic, persist last successful payload to AsyncStorage, and show Offline pill globally.
+- **Build Prep:** Bump version in  to 1.0.0, add eas build script to , create a one-line changelog.
+</pending_tasks>
+
+<current_work>
+Immediately prior to this summary, the AI engineer was addressing console errors reported by the user in the context of the newly implemented standardized error-handling wrapper and the . The user had shared screenshots showing Failed to fetch attendance, Failed to fetch store count, and Failed to fetch data messages.
+
+The AI engineer identified that these console errors are expected because only , , , and ,  have been refactored to use the  and the new  error-handling hook. Other screens like , , , and  still use raw  calls with basic , which are triggering these logs but not user-facing Toast notifications.
+
+The backend APIs are responding with ,  caching is functioning, and the offline mode infrastructure is in place. No app crashes or ErrorBoundary triggers have occurred. The engineer clarified that this behavior is consistent with the planned incremental rollout, where only  shows Toast errors, while other unrefactored screens show console errors. The engineer is currently confirming with the user if navigation works, the  appears in airplane mode, and if Toast notifications are visible only for , before proceeding.
+</current_work>
+
+<optional_next_step>
+The next step is to address the remaining medium-priority items, specifically:
+- Implement a top-level  in .
+- Roll out the  hook to , , , and .
+</optional_next_step>

@@ -1,0 +1,90 @@
+{
+  "common": {
+    "hello": "مرحبا",
+    "welcome": "أهلا وسهلا",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "submit": "إرسال",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "signUp": "إنشاء حساب",
+    "name": "الاسم",
+    "role": "الدور",
+    "selectRole": "اختر الدور"
+  },
+  "roles": {
+    "OWNER": "المالك",
+    "CO": "المدير المشارك",
+    "MANAGER": "مدير",
+    "SHIFT_SUPERVISOR": "مشرف الوردية",
+    "EMPLOYEE": "موظف"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "schedule": "جدول متجري",
+    "attendance": "الحضور",
+    "ingredients": "المكونات",
+    "stores": "المتاجر",
+    "reports": "التقارير"
+  },
+  "clock": {
+    "clockIn": "تسجيل الدخول",
+    "clockOut": "تسجيل الخروج",
+    "currentlyWorking": "يعملون حاليا",
+    "notScheduled": "لم يتم جدولتك اليوم",
+    "tooEarly": "مبكر جدا. يمكنك تسجيل الدخول قبل 10 دقائق من بداية وردية العمل.",
+    "mustCount": "يجب عليك إكمال العد النهائي قبل تسجيل الخروج."
+  },
+  "ingredient": {
+    "firstCount": "العد الأول",
+    "finalCount": "العد النهائي",
+    "addIngredient": "إضافة مكون",
+    "boxes": "صناديق",
+    "units": "وحدات",
+    "lowStock": "مخزون منخفض"
+  },
+  "stores": {
+    "addStore": "إضافة متجر",
+    "maxReached": "تم الوصول إلى الحد الأقصى 50 متجرا",
+    "storeName": "اسم المتجر",
+    "address": "العنوان",
+    "phone": "الهاتف"
+  },
+  "leave": {
+    "requestLeave": "طلب إجازة",
+    "pendingRequests": "الطلبات المعلقة",
+    "approve": "موافقة",
+    "deny": "رفض",
+    "reason": "السبب",
+    "date": "التاريخ"
+  },
+  "employees": {
+    "employees": "الموظفون",
+    "assignToStore": "تعيين في المتجر",
+    "selectStore": "اختر المتجر",
+    "saveAssignment": "حفظ التعيين"
+  },
+  "schedule": {
+    "createSchedule": "إنشاء الجدول",
+    "mySchedule": "جدولي",
+    "weekView": "عرض الأسبوع"
+  },
+  "settings": {
+    "enable2FA": "تفعيل المصادقة الثنائية",
+    "scanQRCode": "مسح رمز الاستجابة السريعة",
+    "enter6DigitCode": "أدخل الرمز المكون من 6 أرقام",
+    "disable2FA": "تعطيل المصادقة الثنائية",
+    "settings": "الإعدادات"
+  }
+}
