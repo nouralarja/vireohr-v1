@@ -357,7 +357,7 @@ async def reset_employee_password(employee_id: str, user: dict = Depends(require
         raise HTTPException(status_code=400, detail="Employee email not found")
     
     # Get default password from environment variable
-    default_password = os.getenv('DEFAULT_EMPLOYEE_PASSWORD', 'gosta123')
+    default_password = os.getenv('DEFAULT_EMPLOYEE_PASSWORD', 'vireohr123')
     
     # Reset password using Firebase Admin
     try:
