@@ -54,7 +54,7 @@ export default function SignIn() {
           keyboardShouldPersistTaps="handled"
         >
           <View style={styles.header}>
-            <Text style={styles.title}>Gosta</Text>
+            <Text style={styles.title}>VireoHR</Text>
             <Text style={styles.subtitle}>{t('auth.signIn')}</Text>
             <Text style={styles.description}>
               Enter your credentials to sign in
