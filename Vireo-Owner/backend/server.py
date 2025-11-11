@@ -192,7 +192,7 @@ def calculate_distance(lat1: float, lng1: float, lat2: float, lng2: float) -> fl
 # Routes
 @api_router.get("/")
 async def health_check():
-    return {"status": "ok", "service": "Gosta Employee Analysis API", "version": "1.0.0"}
+    return {"status": "ok", "service": "VireoHR Employee Management API", "version": "1.0.0"}
 
 # ==================== USER/EMPLOYEE ROUTES ====================
 
