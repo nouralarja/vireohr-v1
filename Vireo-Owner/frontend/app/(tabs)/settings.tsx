@@ -116,7 +116,7 @@ export default function Settings() {
   const generateQRCode = () => {
     // Generate TOTP secret (simplified - in production use proper TOTP library)
     const secret = 'JBSWY3DPEHPK3PXP'; // Demo secret
-    const issuer = 'Gosta';
+    const issuer = 'VireoHR';
     const accountName = user?.email || 'user';
     
     // Generate otpauth URL
