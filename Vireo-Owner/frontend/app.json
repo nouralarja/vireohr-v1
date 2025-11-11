@@ -20,7 +20,7 @@
         "NSLocationAlwaysAndWhenInUseUsageDescription": "VireoHR needs your location to verify you are at the store before clocking in/out.",
         "NSUserNotificationsUsageDescription": "VireoHR sends shift reminders and leave request notifications."
       },
-      "associatedDomains": ["applinks:gostacoffee.com", "applinks:www.gostacoffee.com"]
+      "associatedDomains": ["applinks:vireohr.app", "applinks:www.vireohr.app"]
     },
     "android": {
       "adaptiveIcon": {
