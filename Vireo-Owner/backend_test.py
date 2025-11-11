@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Comprehensive Backend Testing Suite for Gosta Employee Management System
+Comprehensive Backend Testing Suite for VireoHR Employee Management System
 Testing all API endpoints, authentication, authorization, and business logic including:
 - Authentication & Authorization (Firebase)
 - Employee Management (CRUD operations)
