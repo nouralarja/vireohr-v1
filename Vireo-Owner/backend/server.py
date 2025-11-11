@@ -1695,6 +1695,7 @@ async def mark_as_paid(payment_data: PaymentRecord, user: dict = Depends(require
         'noShowCount': no_show_count,
         'noShowPenalty': no_show_penalty,
         'netEarnings': net_earnings,
+        'paid': True,  # Mark as paid
         'paymentDate': get_current_time().isoformat(),
         'paidBy': user['uid'],
         'paidByName': user.get('name', 'Unknown'),
