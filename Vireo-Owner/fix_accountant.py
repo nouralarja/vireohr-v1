@@ -19,7 +19,7 @@ db = firestore.client()
 def fix_accountant():
     """Fix accountant account"""
     email = "accountant@gosta.com"
-    password = "gosta123"
+    password = "vireohr123"
     
     try:
         # Try to get the user

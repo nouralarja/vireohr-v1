@@ -23,7 +23,7 @@ db = firestore.client()
 def create_test_employee():
     """Create a test employee for geofencing demo"""
     email = "geotest@gosta.com"
-    password = "gosta123"
+    password = "vireohr123"
     
     # Create Firebase user
     try:

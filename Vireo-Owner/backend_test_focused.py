@@ -222,7 +222,7 @@ class GostaBackendTester:
         
         print(f"\n📋 TEST ACCOUNTS (from review request):")
         print("   • Owner: nouralarja.dev@gmail.com / 256997")
-        print("   • Accountant: accountant@gosta.com / gosta123")
+        print("   • Accountant: accountant@gosta.com / vireohr123")
         
         print(f"\n🔍 IMPLEMENTATION STATUS:")
         print("   ✅ All requested backend features implemented correctly")

@@ -18,7 +18,7 @@ db = firestore.client()
 
 def create_owner_user():
     email = "owner@gosta.com"
-    password = "gosta123"
+    password = "vireohr123"
     
     try:
         # Try to get existing user

@@ -58,11 +58,11 @@ def main():
     print("="*60 + "\n")
     
     users = [
-        ("owner@gosta.com", "gosta123", "Owner Account", "OWNER"),
-        ("co@gosta.com", "gosta123", "Chief Officer", "CO"),
-        ("manager@gosta.com", "gosta123", "Manager Account", "MANAGER"),
-        ("supervisor@gosta.com", "gosta123", "Supervisor Account", "SHIFT_SUPERVISOR"),
-        ("employee@gosta.com", "gosta123", "Employee Account", "EMPLOYEE"),
+        ("owner@gosta.com", "vireohr123", "Owner Account", "OWNER"),
+        ("co@gosta.com", "vireohr123", "Chief Officer", "CO"),
+        ("manager@gosta.com", "vireohr123", "Manager Account", "MANAGER"),
+        ("supervisor@gosta.com", "vireohr123", "Supervisor Account", "SHIFT_SUPERVISOR"),
+        ("employee@gosta.com", "vireohr123", "Employee Account", "EMPLOYEE"),
     ]
     
     for email, password, name, role in users:
@@ -71,7 +71,7 @@ def main():
     print("\n" + "="*60)
     print("🎉 All Test Accounts Ready!")
     print("="*60)
-    print("\nLogin Credentials (all use password: gosta123):")
+    print("\nLogin Credentials (all use password: vireohr123):")
     print("-" * 60)
     for email, _, name, role in users:
         print(f"• {email:25} → {role}")

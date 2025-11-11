@@ -36,7 +36,7 @@ def cleanup_database():
         print("Creating owner account first...")
         owner_user = auth.create_user(
             email=OWNER_EMAIL,
-            password="gosta123",
+            password="vireohr123",
             display_name="Owner Account"
         )
         owner_uid = owner_user.uid
@@ -164,7 +164,7 @@ def cleanup_database():
     print("="*60)
     print(f"\n✅ Remaining account:")
     print(f"   Email: {OWNER_EMAIL}")
-    print(f"   Password: gosta123")
+    print(f"   Password: vireohr123")
     print(f"   Role: OWNER")
     print(f"   UID: {owner_uid}")
     print("\n📱 You can now login with this account and start fresh!")

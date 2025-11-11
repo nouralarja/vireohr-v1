@@ -19,7 +19,7 @@ db = firestore.client()
 def create_accountant_user():
     """Create accountant test account"""
     email = "accountant@gosta.com"
-    password = "gosta123"
+    password = "vireohr123"
     
     try:
         # Check if user already exists

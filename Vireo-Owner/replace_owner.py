@@ -97,9 +97,9 @@ if __name__ == "__main__":
     if new_uid:
         print("\n✅ SUCCESS! Owner account replacement complete.")
         print("\n📋 REMAINING TEST ACCOUNTS:")
-        print("   • co@gosta.com / gosta123 (CO)")
-        print("   • manager@gosta.com / gosta123 (Manager)")
-        print("   • supervisor@gosta.com / gosta123 (Supervisor)")
-        print("   • employee@gosta.com / gosta123 (Employee)")
+        print("   • co@gosta.com / vireohr123 (CO)")
+        print("   • manager@gosta.com / vireohr123 (Manager)")
+        print("   • supervisor@gosta.com / vireohr123 (Supervisor)")
+        print("   • employee@gosta.com / vireohr123 (Employee)")
     else:
         print("\n❌ Failed to create new owner account.")

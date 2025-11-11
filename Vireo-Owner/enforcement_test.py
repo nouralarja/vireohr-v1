@@ -281,7 +281,7 @@ def main():
     
     print("\n🔑 TEST CREDENTIALS (for manual testing):")
     print("• Owner: nouralarja.dev@gmail.com / 256997")
-    print("• Accountant: accountant@gosta.com / gosta123")
+    print("• Accountant: accountant@gosta.com / vireohr123")
     
     if passed_tests == total_tests:
         print("\n🎉 ALL TESTS PASSED!")
