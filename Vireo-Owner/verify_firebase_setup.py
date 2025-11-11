@@ -35,7 +35,7 @@ for user in page.users:
     print(f"   Email Verified: {user.email_verified}")
     print(f"   Disabled: {user.disabled}")
     
-    if user.email == 'geotest@gosta.com':
+    if user.email == 'geotest@vireohr.com':
         print("   >>> THIS IS THE GEOTEST USER <<<")
 
 if user_count == 0:
@@ -51,7 +51,7 @@ print(f"\nTotal Firestore users: {len(firestore_users)}")
 
 for u in firestore_users:
     u_data = u.to_dict()
-    if u_data.get('email') == 'geotest@gosta.com':
+    if u_data.get('email') == 'geotest@vireohr.com':
         print(f"\n✅ Found geotest in Firestore:")
         print(f"   UID: {u.id}")
         print(f"   Email: {u_data.get('email')}")
@@ -65,7 +65,7 @@ print("="*60)
 
 try:
     # Get the user
-    user = auth.get_user_by_email('geotest@gosta.com')
+    user = auth.get_user_by_email('geotest@vireohr.com')
     print(f"\n✅ User exists in Firebase Auth")
     print(f"   Email: {user.email}")
     print(f"   UID: {user.uid}")

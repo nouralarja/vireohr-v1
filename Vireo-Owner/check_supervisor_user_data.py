@@ -16,7 +16,7 @@ print("CHECKING SUPERVISOR USER DATA")
 print("="*60)
 
 # Get supervisor
-supervisor_user = auth.get_user_by_email('supervisor@gosta.com')
+supervisor_user = auth.get_user_by_email('supervisor@vireohr.com')
 print(f"\n👤 Supervisor UID: {supervisor_user.uid}")
 
 # Get Firestore user data

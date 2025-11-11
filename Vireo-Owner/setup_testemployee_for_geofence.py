@@ -26,7 +26,7 @@ uid = 'AStZ6ahsPwWxJAwxZjhNHM7oxMX2'
 # Reset password for testemployee
 try:
     auth.update_user(uid, password='test123456')
-    print("✅ Password reset for testemployee@gosta.com")
+    print("✅ Password reset for testemployee@vireohr.com")
 except Exception as e:
     print(f"❌ Error resetting password: {e}")
 
@@ -67,11 +67,11 @@ if stores:
     print("\n" + "="*60)
     print("✅ READY TO TEST!")
     print("="*60)
-    print(f"\n📧 Email: testemployee@gosta.com")
+    print(f"\n📧 Email: testemployee@vireohr.com")
     print(f"🔑 Password: test123456")
     print(f"📍 Store Location: {YOUR_LAT:.6f}, {YOUR_LNG:.6f}")
     print(f"🔒 Geofence: 10m radius")
     print(f"⏰ Shift Started: {shift_start_time.strftime('%H:%M')} (10 min ago - YOU'RE LATE!)")
     print(f"⏰ Shift Ends: {shift_end_time.strftime('%H:%M')}")
-    print("\n🚀 Login with testemployee@gosta.com / test123456")
+    print("\n🚀 Login with testemployee@vireohr.com / test123456")
 
