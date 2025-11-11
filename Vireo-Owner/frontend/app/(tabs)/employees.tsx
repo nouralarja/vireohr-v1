@@ -598,7 +598,7 @@ export default function Employees() {
               style={{ marginTop: SPACING.md }}
             />
             <Text style={styles.defaultPasswordNote}>
-              Default password will be: gosta123
+              Default password will be: vireohr123
             </Text>
           </View>
         </View>
