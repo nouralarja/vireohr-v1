@@ -75,8 +75,8 @@
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow Gosta to save CSV files to your device.",
-          "savePhotosPermission": "Allow Gosta to save CSV files to Downloads folder.",
+          "photosPermission": "Allow VireoHR to save CSV files to your device.",
+          "savePhotosPermission": "Allow VireoHR to save CSV files to Downloads folder.",
           "isAccessMediaLocationEnabled": true
         }
       ],
