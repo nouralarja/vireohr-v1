@@ -18,7 +18,7 @@ db = firestore.client()
 # Create test employee in Firebase Auth
 try:
     user = auth.create_user(
-        email='testemployee@gosta.com',
+        email='testemployee@vireohr.com',
         password='test123456',
         display_name='Test Employee'
     )
@@ -27,7 +27,7 @@ try:
 except Exception as e:
     # User might already exist, try to get it
     try:
-        user = auth.get_user_by_email('testemployee@gosta.com')
+        user = auth.get_user_by_email('testemployee@vireohr.com')
         uid = user.uid
         print(f"✅ Using existing Firebase Auth user: {uid}")
     except:
@@ -37,7 +37,7 @@ except Exception as e:
 # Create user in Firestore with salary
 user_data = {
     'uid': uid,
-    'email': 'testemployee@gosta.com',
+    'email': 'testemployee@vireohr.com',
     'name': 'Test Employee',
     'role': 'EMPLOYEE',
     'salary': 50,  # 50 JD/hour
