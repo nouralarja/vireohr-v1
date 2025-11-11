@@ -21,22 +21,22 @@ print("="*60)
 
 # 1. Create or get supervisor account
 try:
-    supervisor_user = auth.get_user_by_email('supervisor@gosta.com')
-    print(f"\n✅ Supervisor account exists: supervisor@gosta.com")
+    supervisor_user = auth.get_user_by_email('supervisor@vireohr.com')
+    print(f"\n✅ Supervisor account exists: supervisor@vireohr.com")
     print(f"   UID: {supervisor_user.uid}")
 except:
     supervisor_user = auth.create_user(
-        email='supervisor@gosta.com',
+        email='supervisor@vireohr.com',
         password='gosta123',
         display_name='Test Supervisor'
     )
-    print(f"\n✅ Created supervisor account: supervisor@gosta.com / gosta123")
+    print(f"\n✅ Created supervisor account: supervisor@vireohr.com / gosta123")
     print(f"   UID: {supervisor_user.uid}")
 
 # 2. Create/update supervisor user in Firestore
 supervisor_data = {
     'uid': supervisor_user.uid,
-    'email': 'supervisor@gosta.com',
+    'email': 'supervisor@vireohr.com',
     'name': 'Test Supervisor',
     'role': 'EMPLOYEE',  # Regular employee who can be assigned as supervisor
     'phone': '+962791234567',
@@ -123,7 +123,7 @@ print("\n" + "="*60)
 print("✅ SUPERVISOR TEST ENVIRONMENT READY!")
 print("="*60)
 print(f"\n📱 Test Instructions:")
-print(f"1. Login with: supervisor@gosta.com / gosta123")
+print(f"1. Login with: supervisor@vireohr.com / gosta123")
 print(f"2. Go to Clock tab and clock in")
 print(f"3. After clocking in, Ingredients tab should appear")
 print(f"4. Go to Ingredients tab")

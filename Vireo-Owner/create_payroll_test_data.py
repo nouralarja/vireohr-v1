@@ -15,7 +15,7 @@ db = firestore.client()
 # Create or get test employee
 try:
     user = auth.create_user(
-        email='payrolltest@gosta.com',
+        email='payrolltest@vireohr.com',
         password='test123456',
         display_name='Payroll Test Employee'
     )
@@ -23,7 +23,7 @@ try:
     print(f"✅ Created new test employee: {uid}")
 except Exception as e:
     try:
-        user = auth.get_user_by_email('payrolltest@gosta.com')
+        user = auth.get_user_by_email('payrolltest@vireohr.com')
         uid = user.uid
         print(f"✅ Using existing test employee: {uid}")
     except:
@@ -33,7 +33,7 @@ except Exception as e:
 # Create user in Firestore
 user_data = {
     'uid': uid,
-    'email': 'payrolltest@gosta.com',
+    'email': 'payrolltest@vireohr.com',
     'name': 'Payroll Test Employee',
     'role': 'EMPLOYEE',
     'salary': 60,  # 60 JD/hour
@@ -209,7 +209,7 @@ print(f"   ⚠️  NO pay-run created - remains UNPAID ({gross_earnings_3:.2f} J
 print("\n" + "="*60)
 print("✅ TEST DATA CREATION COMPLETE!")
 print("="*60)
-print(f"\n📧 Test Employee: payrolltest@gosta.com / test123456")
+print(f"\n📧 Test Employee: payrolltest@vireohr.com / test123456")
 print(f"👤 Employee ID: {uid}")
 print(f"💰 Hourly Rate: 60 JD/hour")
 print(f"\n📊 PAYMENT SUMMARY:")

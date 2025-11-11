@@ -20,7 +20,7 @@ print("FORCE CLOCK-IN FOR SUPERVISOR (BYPASS GEOFENCE)")
 print("="*60)
 
 # Get supervisor
-supervisor_user = auth.get_user_by_email('supervisor@gosta.com')
+supervisor_user = auth.get_user_by_email('supervisor@vireohr.com')
 now = datetime.now(APP_TIMEZONE)
 today = now.date().isoformat()
 
