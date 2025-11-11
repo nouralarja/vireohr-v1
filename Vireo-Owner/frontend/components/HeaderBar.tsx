@@ -13,8 +13,8 @@ export default function HeaderBar() {
   const { tenant, loading: tenantLoading } = useTenant();
   const insets = useSafeAreaInsets();
 
-  // Use tenant name or fallback to Gosta
-  const businessName = tenant?.name || 'Gosta';
+  // Use tenant name or fallback to VireoHR
+  const businessName = tenant?.name || 'VireoHR';
   const avatarLetter = businessName.charAt(0).toUpperCase();
 
   return (
