@@ -1,5 +1,5 @@
 """
-Helper functions for Gosta backend API
+Helper functions for VireoHR backend API
 Consolidates duplicate logic across endpoints
 """
 from fastapi import HTTPException
