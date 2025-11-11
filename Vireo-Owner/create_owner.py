@@ -17,7 +17,7 @@ if not firebase_admin._apps:
 db = firestore.client()
 
 def create_owner_user():
-    email = "owner@gosta.com"
+    email = "owner@vireohr.com"
     password = "vireohr123"
     
     try:

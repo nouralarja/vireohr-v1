@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Database cleanup script - Removes all testing data except owner account
-Keeps only: owner@gosta.com
+Keeps only: owner@vireohr.com
 """
 import firebase_admin
 from firebase_admin import credentials, auth, firestore
@@ -18,7 +18,7 @@ if not firebase_admin._apps:
 
 db = firestore.client()
 
-OWNER_EMAIL = "owner@gosta.com"
+OWNER_EMAIL = "owner@vireohr.com"
 
 def cleanup_database():
     """Remove all data except the owner account"""
@@ -172,7 +172,7 @@ def cleanup_database():
 
 if __name__ == "__main__":
     # Confirm before cleanup
-    print("⚠️  WARNING: This will DELETE ALL data except owner@gosta.com!")
+    print("⚠️  WARNING: This will DELETE ALL data except owner@vireohr.com!")
     print("="*60)
     confirm = input("Type 'YES' to confirm cleanup: ")
     

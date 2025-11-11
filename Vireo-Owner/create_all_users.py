@@ -58,7 +58,7 @@ def main():
     print("="*60 + "\n")
     
     users = [
-        ("owner@gosta.com", "vireohr123", "Owner Account", "OWNER"),
+        ("owner@vireohr.com", "vireohr123", "Owner Account", "OWNER"),
         ("co@gosta.com", "vireohr123", "Chief Officer", "CO"),
         ("manager@gosta.com", "vireohr123", "Manager Account", "MANAGER"),
         ("supervisor@gosta.com", "vireohr123", "Supervisor Account", "SHIFT_SUPERVISOR"),

@@ -17,8 +17,8 @@ if not firebase_admin._apps:
 db = firestore.client()
 
 def delete_old_owner():
-    """Delete the old owner@gosta.com account"""
-    old_email = "owner@gosta.com"
+    """Delete the old owner@vireohr.com account"""
+    old_email = "owner@vireohr.com"
     try:
         # Get and delete from Firebase Auth
         user = auth.get_user_by_email(old_email)
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     print("="*60)
     
     # Step 1: Delete old owner
-    print("\n1️⃣  Deleting old owner@gosta.com...")
+    print("\n1️⃣  Deleting old owner@vireohr.com...")
     delete_old_owner()
     
     # Step 2: Create new owner
