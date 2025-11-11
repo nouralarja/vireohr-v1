@@ -43,12 +43,12 @@
           "data": [
             {
               "scheme": "https",
-              "host": "gostacoffee.com",
+              "host": "vireohr.app",
               "pathPrefix": "/app"
             },
             {
               "scheme": "https",
-              "host": "www.gostacoffee.com",
+              "host": "www.vireohr.app",
               "pathPrefix": "/app"
             }
           ],
