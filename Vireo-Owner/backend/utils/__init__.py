@@ -1,5 +1,5 @@
 """
-Backend utility helpers for Gosta API
+Backend utility helpers for VireoHR API
 """
 from .helpers import (
     get_user_document,
